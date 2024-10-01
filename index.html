@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Enkripsi Kriptografi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enkripsi Kriptografi</h1>
+        <div class="input-section">
+            <label for="inputText">Input Teks:</label>
+            <textarea id="inputText" rows="5" placeholder="Enter Plaintext..."></textarea>
+        </div>
+        <div class="input-section">
+            <label for="keyInput">Key:</label>
+            <input type="text" id="keyInput" placeholder="Enter Key...">
+        </div>
+        <div class="input-section">
+            <label for="cipherSelect">Cipher Type:</label>
+            <select id="cipherSelect">
+                <option value="vigenere">Vigenère Cipher</option>
+                <option value="auto_key_vigenere">Auto-Key Vigenère Cipher</option>
+                <option value="playfair">Playfair Cipher</option>
+                <option value="hill">Hill Cipher</option>
+                <option value="super">Super Encryption</option>
+            </select>
+        </div>
+
+        <button id="encryptBtn">Encrypt</button>
+        <button id="decryptBtn">Decrypt</button>
+
+        <div class="output-section">
+            <label for="outputText">Output Text (Base64):</label>
+            <textarea id="outputText" rows="5" readonly></textarea>
+        </div>
+
+        <button id="saveFileBtn">Save Ciphertext to File</button>
+        <input type="file" id="inputFile" />
+    </div>
+
+    <script src="ciphers.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
